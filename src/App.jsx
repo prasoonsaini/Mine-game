@@ -77,9 +77,7 @@ const from = Keypair.fromSecretKey(new Uint8Array(secret));
   };
 
   async function DoCashOut() {
-        console.log("Transaction called");
-       
-        
+      console.log("Transaction called");
       setBalance(+balance + +score)
       setScore(0);
       setAmount(0);
@@ -99,17 +97,10 @@ const from = Keypair.fromSecretKey(new Uint8Array(secret));
         [from],
     );
     console.log("SIGNATURE", signature);
+    setTimeout(() => {
       window.location.reload();
+    }, 5000);
   }
-
-  // function DoCashOut(){
-  //   setBalance(+balance + +score)
-  //   setScore(0.000000000);
-  //   setAmount(0.000000000);
-  //   setGameOver(true);
-  //   /// Do transaction here ------------
-  //   window.location.reload();
-  // }
   return (
     <>
       <div className='d-flex gap-10'>

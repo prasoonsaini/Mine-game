@@ -18,7 +18,7 @@ function SelectSol({amount, balance, startingPrice, setBalance, justCashedOut}) 
     const value = e.target.value.replace(/\s?SOL$/, '');
     setPrice(value ? parseFloat(value) : 1);
     startingPrice=price;
-    if(price<=balance && price>=1)
+    if(price>=1)
     setClickable(true);
     else 
     setClickable(false);
@@ -28,7 +28,7 @@ function SelectSol({amount, balance, startingPrice, setBalance, justCashedOut}) 
     setPrice(e.target.value);
     startingPrice=price;
     console.log("pppppppcdww",price);
-    if(price<=balance && price>=1 )
+    if(price>=1 )
     setClickable(true);
     else
     setClickable(false);
